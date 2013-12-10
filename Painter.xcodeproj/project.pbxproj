@@ -19,6 +19,10 @@
 		AF8B4310183265B80042696F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF8B42F8183265B80042696F /* UIKit.framework */; };
 		AF8B4318183265B80042696F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF8B4316183265B80042696F /* InfoPlist.strings */; };
 		AF8B431A183265B80042696F /* PainterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8B4319183265B80042696F /* PainterTests.m */; };
+		BFB4D9FF185719EF0074A761 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFB4D9FC185719EF0074A761 /* Default-568h@2x.png */; };
+		BFB4DA00185719EF0074A761 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BFB4D9FD185719EF0074A761 /* Default.png */; };
+		BFB4DA01185719EF0074A761 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFB4D9FE185719EF0074A761 /* Default@2x.png */; };
+		BFB4DA0618571DE80074A761 /* PMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB4DA0518571DE80074A761 /* PMainViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +52,12 @@
 		AF8B4315183265B80042696F /* PainterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PainterTests-Info.plist"; sourceTree = "<group>"; };
 		AF8B4317183265B80042696F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AF8B4319183265B80042696F /* PainterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PainterTests.m; sourceTree = "<group>"; };
+		BFB4D9FC185719EF0074A761 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		BFB4D9FD185719EF0074A761 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		BFB4D9FE185719EF0074A761 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		BFB4DA0218571A460074A761 /* PConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PConfig.h; sourceTree = "<group>"; };
+		BFB4DA0418571DE80074A761 /* PMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMainViewController.h; sourceTree = "<group>"; };
+		BFB4DA0518571DE80074A761 /* PMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMainViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,10 +117,13 @@
 		AF8B42FA183265B80042696F /* Painter */ = {
 			isa = PBXGroup;
 			children = (
+				BFB4DA0218571A460074A761 /* PConfig.h */,
 				AF8B4303183265B80042696F /* AppDelegate.h */,
 				AF8B4304183265B80042696F /* AppDelegate.m */,
+				BFB4DA0318571B060074A761 /* UIViewControllers */,
 				AF8B4306183265B80042696F /* Images.xcassets */,
 				AF8B42FB183265B80042696F /* Supporting Files */,
+				BFB4D9FA185719EF0074A761 /* Resource */,
 			);
 			path = Painter;
 			sourceTree = "<group>";
@@ -142,6 +155,33 @@
 				AF8B4316183265B80042696F /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BFB4D9FA185719EF0074A761 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				BFB4D9FB185719EF0074A761 /* Default */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		BFB4D9FB185719EF0074A761 /* Default */ = {
+			isa = PBXGroup;
+			children = (
+				BFB4D9FC185719EF0074A761 /* Default-568h@2x.png */,
+				BFB4D9FD185719EF0074A761 /* Default.png */,
+				BFB4D9FE185719EF0074A761 /* Default@2x.png */,
+			);
+			path = Default;
+			sourceTree = "<group>";
+		};
+		BFB4DA0318571B060074A761 /* UIViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BFB4DA0418571DE80074A761 /* PMainViewController.h */,
+				BFB4DA0518571DE80074A761 /* PMainViewController.m */,
+			);
+			path = UIViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,6 +228,7 @@
 		AF8B42E9183265B80042696F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = P;
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Yaoqiang Chen";
 				TargetAttributes = {
@@ -221,6 +262,9 @@
 			files = (
 				AF8B42FF183265B80042696F /* InfoPlist.strings in Resources */,
 				AF8B4307183265B80042696F /* Images.xcassets in Resources */,
+				BFB4DA01185719EF0074A761 /* Default@2x.png in Resources */,
+				BFB4D9FF185719EF0074A761 /* Default-568h@2x.png in Resources */,
+				BFB4DA00185719EF0074A761 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFB4DA0618571DE80074A761 /* PMainViewController.m in Sources */,
 				AF8B4305183265B80042696F /* AppDelegate.m in Sources */,
 				AF8B4301183265B80042696F /* main.m in Sources */,
 			);
@@ -358,7 +403,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Painter/Painter-Prefix.pch";
 				INFOPLIST_FILE = "Painter/Painter-Info.plist";
@@ -371,7 +415,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Painter/Painter-Prefix.pch";
 				INFOPLIST_FILE = "Painter/Painter-Info.plist";
@@ -441,6 +484,7 @@
 				AF8B431F183265B80042696F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AF8B4320183265B80042696F /* Build configuration list for PBXNativeTarget "PainterTests" */ = {
 			isa = XCConfigurationList;
@@ -449,6 +493,7 @@
 				AF8B4322183265B80042696F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
