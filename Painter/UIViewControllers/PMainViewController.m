@@ -103,17 +103,37 @@
             break;
         case 2:
         {
-            
+            [self shareImage];
         }
             break;
         case 3:
         {
-            
+            UINavigationController *accountViewController =[[UMSocialControllerService defaultControllerService] getSnsAccountController];
+            [self presentModalViewController:accountViewController animated:YES];
         }
             break;
         default:
             break;
     }
+}
+
+-(void)shareImage
+{
+    UIGraphicsBeginImageContext(_mainView.bounds.size);
+	
+    [_mainView.layer renderInContext:UIGraphicsGetCurrentContext()];
+	
+    UIImage *shareImage = UIGraphicsGetImageFromCurrentImageContext();
+	
+    UIGraphicsEndImageContext();
+
+    [UMSocialData defaultData].extConfig.wxMessageType = UMSocialWXMessageTypeApp;
+    [UMSocialData defaultData].extConfig.title = [NSString stringWithFormat:@"我在随心涂鸦上画了一幅画，大家都来画出你的心情吧"];
+    
+    NSString *shareText = [NSString stringWithFormat:@"我在随心涂鸦上画了一幅画，大家都来画出你的心情吧！"];            //分享内嵌文字
+    
+    //如果得到分享完成回调，需要传递delegate参数
+    [UMSocialSnsService presentSnsIconSheetView:self appKey:kUMAppKey shareText:shareText shareImage:shareImage shareToSnsNames:@[UMShareToSina,UMShareToTencent,UMShareToWechatSession,UMShareToWechatTimeline,UMShareToQQ] delegate:nil];
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker

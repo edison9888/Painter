@@ -18,3 +18,5 @@
 #define PFontSize(x) [UIFont systemFontOfSize:x]
 
 #define kShadeClean @"shadeClean"
+
+#define kUMAppKey @"52a8342456240b9032041ee5"

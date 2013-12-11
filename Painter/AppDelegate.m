@@ -23,6 +23,24 @@
         [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"nav_bg.png"] forBarMetrics:UIBarMetricsDefault];
     }
     
+    //友盟社交
+    [UMSocialData setAppKey:kUMAppKey];
+    
+    [UMSocialConfig setWXAppId:@"wx6e39922c08019250" url:nil];
+    
+    //打开Qzone的SSO开关
+    [UMSocialConfig setSupportQzoneSSO:YES importClasses:@[[QQApiInterface class],[TencentOAuth class]]];
+    
+    //设置手机QQ的AppId，url传nil，将使用友盟的网址
+    [UMSocialConfig setQQAppId:@"100536337" url:nil importClasses:@[[QQApiInterface class],[TencentOAuth class]]];
+    
+    [UMSocialConfig setSupportSinaSSO:YES];
+    
+#warning 正式打包上线的时候把ifdef注释掉，测试和开发的时候不进行统计
+#ifdef RELEASE
+    [MobClick startWithAppkey:kUMAppKey reportPolicy:SEND_ON_EXIT channelId:nil];
+#endif
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
@@ -36,6 +54,20 @@
     [self.window makeKeyAndVisible];
     return YES;
 }
+
+- (void)applicationDidBecomeActive:(UIApplication *)application
+{
+    [UMSocialSnsService  applicationDidBecomeActive];
+}
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+{
+    return  [UMSocialSnsService handleOpenURL:url wxApiDelegate:nil];
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
+    return  [UMSocialSnsService handleOpenURL:url wxApiDelegate:nil];
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {
@@ -52,11 +84,6 @@
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-}
-
-- (void)applicationDidBecomeActive:(UIApplication *)application
-{
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application

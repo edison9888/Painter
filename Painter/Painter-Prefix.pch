@@ -18,5 +18,7 @@
 #import "PConfig.h"
 
 #import "SVProgressHUD.h"
+#import "MobClick.h"
+#import "UMSocial.h"
 
 #import "UINavigationItem+FR.h"
