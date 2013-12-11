@@ -45,6 +45,9 @@
 		BF7683E118584DC9007E5E20 /* setting_icon4.png in Resources */ = {isa = PBXBuildFile; fileRef = BF7683DF18584DC9007E5E20 /* setting_icon4.png */; };
 		BF7683E218584DC9007E5E20 /* setting_icon4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF7683E018584DC9007E5E20 /* setting_icon4@2x.png */; };
 		BF7683E5185851DC007E5E20 /* PSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7683E4185851DC007E5E20 /* PSettingViewController.m */; };
+		BF7683EB18586758007E5E20 /* UIImageCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7683EA18586758007E5E20 /* UIImageCategory.m */; };
+		BF7683F218586906007E5E20 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BF7683EF18586906007E5E20 /* SVProgressHUD.bundle */; };
+		BF7683F318586906007E5E20 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7683F118586906007E5E20 /* SVProgressHUD.m */; };
 		BFB4D9FF185719EF0074A761 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFB4D9FC185719EF0074A761 /* Default-568h@2x.png */; };
 		BFB4DA00185719EF0074A761 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BFB4D9FD185719EF0074A761 /* Default.png */; };
 		BFB4DA01185719EF0074A761 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFB4D9FE185719EF0074A761 /* Default@2x.png */; };
@@ -108,6 +111,11 @@
 		BF7683E018584DC9007E5E20 /* setting_icon4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setting_icon4@2x.png"; sourceTree = "<group>"; };
 		BF7683E3185851DC007E5E20 /* PSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSettingViewController.h; sourceTree = "<group>"; };
 		BF7683E4185851DC007E5E20 /* PSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSettingViewController.m; sourceTree = "<group>"; };
+		BF7683E918586758007E5E20 /* UIImageCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageCategory.h; sourceTree = "<group>"; };
+		BF7683EA18586758007E5E20 /* UIImageCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageCategory.m; sourceTree = "<group>"; };
+		BF7683EF18586906007E5E20 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		BF7683F018586906007E5E20 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		BF7683F118586906007E5E20 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		BFB4D9FC185719EF0074A761 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		BFB4D9FD185719EF0074A761 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		BFB4D9FE185719EF0074A761 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
@@ -178,6 +186,7 @@
 				BFB4DA0218571A460074A761 /* PConfig.h */,
 				AF8B4303183265B80042696F /* AppDelegate.h */,
 				AF8B4304183265B80042696F /* AppDelegate.m */,
+				BF7683ED18586906007E5E20 /* ThirdLibrary */,
 				BF7683CA185815A4007E5E20 /* UIKit */,
 				BF7683D618581E8F007E5E20 /* UIViews */,
 				BFB4DA0318571B060074A761 /* UIViewControllers */,
@@ -262,6 +271,8 @@
 		BF7683CA185815A4007E5E20 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				BF7683E918586758007E5E20 /* UIImageCategory.h */,
+				BF7683EA18586758007E5E20 /* UIImageCategory.m */,
 				BF7683CB185815BB007E5E20 /* UINavigationItem+FR.h */,
 				BF7683CC185815BB007E5E20 /* UINavigationItem+FR.m */,
 			);
@@ -277,6 +288,24 @@
 				BF7683DA18581EA4007E5E20 /* Squiggle.m */,
 			);
 			path = UIViews;
+			sourceTree = "<group>";
+		};
+		BF7683ED18586906007E5E20 /* ThirdLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				BF7683EE18586906007E5E20 /* SVProgressHUD */,
+			);
+			path = ThirdLibrary;
+			sourceTree = "<group>";
+		};
+		BF7683EE18586906007E5E20 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				BF7683EF18586906007E5E20 /* SVProgressHUD.bundle */,
+				BF7683F018586906007E5E20 /* SVProgressHUD.h */,
+				BF7683F118586906007E5E20 /* SVProgressHUD.m */,
+			);
+			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
 		BFB4D9FA185719EF0074A761 /* Resource */ = {
@@ -397,6 +426,7 @@
 				BF7683AB18580DDD007E5E20 /* Icon_120.png in Resources */,
 				BF7683D5185816BF007E5E20 /* me_setbnon@2x.png in Resources */,
 				BF7683E218584DC9007E5E20 /* setting_icon4@2x.png in Resources */,
+				BF7683F218586906007E5E20 /* SVProgressHUD.bundle in Resources */,
 				BF7683AA18580DDD007E5E20 /* Icon@2x.png in Resources */,
 				AF8B4307183265B80042696F /* Images.xcassets in Resources */,
 				BF7683B318580E24007E5E20 /* erase.png in Resources */,
@@ -434,7 +464,9 @@
 				BF7683DC18581EA4007E5E20 /* Squiggle.m in Sources */,
 				BF7683E5185851DC007E5E20 /* PSettingViewController.m in Sources */,
 				BF7683DB18581EA4007E5E20 /* MainView.m in Sources */,
+				BF7683EB18586758007E5E20 /* UIImageCategory.m in Sources */,
 				BF7683CD185815BB007E5E20 /* UINavigationItem+FR.m in Sources */,
+				BF7683F318586906007E5E20 /* SVProgressHUD.m in Sources */,
 				BFB4DA0618571DE80074A761 /* PMainViewController.m in Sources */,
 				AF8B4305183265B80042696F /* AppDelegate.m in Sources */,
 				AF8B4301183265B80042696F /* main.m in Sources */,

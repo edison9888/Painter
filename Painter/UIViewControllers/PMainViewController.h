@@ -10,8 +10,10 @@
 #import "MainView.h"
 #import "PSettingViewController.h"
 
-@interface PMainViewController : UIViewController<PSettingViewControllerDelegate>
+@interface PMainViewController : UIViewController<PSettingViewControllerDelegate,UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 
 @property(nonatomic,strong)MainView *mainView;
+
+@property(nonatomic,strong)UIImagePickerController *imagePC;
 
 @end

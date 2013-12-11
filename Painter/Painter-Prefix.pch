@@ -17,4 +17,6 @@
 
 #import "PConfig.h"
 
+#import "SVProgressHUD.h"
+
 #import "UINavigationItem+FR.h"

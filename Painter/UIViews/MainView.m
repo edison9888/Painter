@@ -43,7 +43,18 @@
 	
     UIGraphicsEndImageContext();
 	
-    UIImageWriteToSavedPhotosAlbum(viewImage, nil, nil, nil);
+    UIImageWriteToSavedPhotosAlbum(viewImage, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
+}
+
+- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo;
+{
+    // Handle the end of the image write process
+    if (!error)
+        [SVProgressHUD showSuccessWithStatus:@"图画已保存到相册"];
+    else
+    {
+        [SVProgressHUD showErrorWithStatus:[error localizedDescription]];
+    }
 }
 
 // draw the view

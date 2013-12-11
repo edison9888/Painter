@@ -7,6 +7,7 @@
 //
 
 #import "PMainViewController.h"
+#import "UIImageCategory.h"
 
 @interface PMainViewController ()
 
@@ -34,9 +35,19 @@
     self.view.backgroundColor = PClearColor;
 
     _mainView = [[MainView alloc] initWithFrame:CGRectMake(0, 0, 320, self.view.bounds.size.height-44)];
-    _mainView.backgroundColor = [UIColor greenColor];
+    _mainView.backgroundColor = PWhiteColor;
     [self.view addSubview:_mainView];
+}
 
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    if (!_imagePC) {
+        _imagePC=[[UIImagePickerController alloc] init];
+        _imagePC.sourceType=UIImagePickerControllerSourceTypePhotoLibrary;
+        _imagePC.delegate=self;
+    }
 }
 
 - (void)setColor:(UIColor *)color
@@ -68,7 +79,54 @@
 
 -(void)moreEvent
 {
-    
+    UIActionSheet *actionSheet = [[UIActionSheet alloc]
+                                  initWithTitle:nil
+                                  delegate: self
+                                  cancelButtonTitle: @"取消"
+                                  destructiveButtonTitle: nil
+                                  otherButtonTitles:@"从相册选择图片",@"保存图画到相册",@"分享图画",@"分享账号设置",nil];
+    [actionSheet showInView: self.view];
+}
+
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    switch (buttonIndex) {
+        case 0:
+        {
+            [self presentModalViewController:_imagePC animated:YES];
+        }
+            break;
+        case 1:
+        {
+            [_mainView saveView];
+        }
+            break;
+        case 2:
+        {
+            
+        }
+            break;
+        case 3:
+        {
+            
+        }
+            break;
+        default:
+            break;
+    }
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker
+didFinishPickingMediaWithInfo:(NSDictionary *)info {
+	UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
+	image = [image transformWidth:_mainView.bounds.size.width height:_mainView.bounds.size.height ];
+	
+	[_mainView setBackgroundColor:[UIColor colorWithPatternImage:image]];
+	[self dismissModalViewControllerAnimated:YES];
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+	[_imagePC dismissModalViewControllerAnimated:YES];
 }
 
 -(void)showSetting
