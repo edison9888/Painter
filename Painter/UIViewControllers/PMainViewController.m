@@ -19,6 +19,8 @@
     self = [super init];
     if (self) {
         // Custom initialization
+        [self.navigationItem setNavigationItemTitle:@"涂涂画画"];
+        [self.navigationItem addRightButton:self withAction:@selector(showSetting)];
     }
     return self;
 }
@@ -29,6 +31,11 @@
     self.view.frame = CGRectMake(0, IOS7_STATUS_BAR_HEGHT, 320, self.view.bounds.size.height - IOS7_STATUS_BAR_HEGHT);
 	// Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor redColor];
+}
+
+-(void)showSetting
+{
+    
 }
 
 - (void)didReceiveMemoryWarning

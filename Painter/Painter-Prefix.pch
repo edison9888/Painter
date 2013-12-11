@@ -16,3 +16,5 @@
 #endif
 
 #import "PConfig.h"
+
+#import "UINavigationItem+FR.h"

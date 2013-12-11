@@ -14,3 +14,5 @@
 #define PWhiteColor [UIColor whiteColor]
 #define PBlackColor [UIColor blackColor]
 #define PClearColor [UIColor clearColor]
+
+#define PFontSize(x) [UIFont systemFontOfSize:x]

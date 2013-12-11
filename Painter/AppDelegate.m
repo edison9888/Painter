@@ -13,14 +13,25 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [[UIApplication sharedApplication] setStatusBarHidden:NO];
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackOpaque];
+    
+    if (IS_IOS7) {
+        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+        [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"nav_bg2.png"] forBarMetrics:UIBarMetricsDefault];
+    }
+    else
+    {
+        [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"nav_bg.png"] forBarMetrics:UIBarMetricsDefault];
+    }
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     
-    _mainVC = [[PMainViewController alloc] init];
-    [self.window setRootViewController:_mainVC];
+    PMainViewController *mainVC = [[PMainViewController alloc] init];
+    
+    _navVC = [[UINavigationController alloc] initWithRootViewController:mainVC];
+    _navVC.navigationBar.translucent = NO;
+    [self.window setRootViewController:_navVC];
     
     [self.window makeKeyAndVisible];
     return YES;

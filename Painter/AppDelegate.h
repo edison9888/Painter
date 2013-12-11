@@ -13,6 +13,6 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property(nonatomic,strong)PMainViewController *mainVC;
+@property(nonatomic,strong)UINavigationController *navVC;
 
 @end
