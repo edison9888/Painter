@@ -10,6 +10,7 @@
 
 @interface UINavigationItem (FR)
 
+- (void)addLeftButton:(id)viewController withAction:(SEL)action;
 - (void)addRightButton:(id)viewController withAction:(SEL)action;
 - (void)addBackButton:(id)viewController withAction:(SEL)action;
 

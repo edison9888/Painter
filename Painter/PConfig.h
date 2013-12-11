@@ -16,3 +16,5 @@
 #define PClearColor [UIColor clearColor]
 
 #define PFontSize(x) [UIFont systemFontOfSize:x]
+
+#define kShadeClean @"shadeClean"

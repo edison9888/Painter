@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MainView.h"
+#import "PSettingViewController.h"
 
-@interface PMainViewController : UIViewController
+@interface PMainViewController : UIViewController<PSettingViewControllerDelegate>
+
+@property(nonatomic,strong)MainView *mainView;
 
 @end

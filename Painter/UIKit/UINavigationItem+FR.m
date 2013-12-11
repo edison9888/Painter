@@ -23,6 +23,14 @@
     
 }
 
+- (void)addLeftButton:(id)viewController withAction:(SEL)action
+{
+    UIButton *LeftButton = [self createNavtgationItemButton:CGRectMake(0, 0, 30, 32) normalImage:[UIImage imageNamed:@"setting_icon4"] highlightImage:nil title:nil viewController:viewController action:action];
+    
+    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc]initWithCustomView:LeftButton];
+    self.leftBarButtonItem= leftItem;
+}
+
 - (void)addRightButton:(id)viewController withAction:(SEL)action
 {
     UIButton *rightButton = [self createNavtgationItemButton:CGRectMake(0, 0, 35, 36) normalImage:[UIImage imageNamed:@"me_setbn"] highlightImage:[UIImage imageNamed:@"me_setbnon"] title:nil viewController:viewController action:action];
