@@ -126,12 +126,11 @@
       [squiggle addPoint:[touch locationInView:self]];
       
       // the key for each touch is the value of the pointer
-      NSValue *touchValue = [NSValue valueWithPointer:touch];
+      NSValue *touchValue = [NSValue valueWithPointer:(__bridge const void *)(touch)];
       NSString *key = [NSString stringWithFormat:@"%@", touchValue];
       
       // add the new touch to the dictionary under a unique key
       [squiggles setValue:squiggle forKey:key];
-      [squiggle release]; // we are done with squiggle so release it
    } // end for
 } // end method touchesBegan:withEvent:
 
@@ -144,7 +143,7 @@
    for (UITouch *touch in array)
    {
       // get the unique key for this touch
-      NSValue *touchValue = [NSValue valueWithPointer:touch];
+      NSValue *touchValue = [NSValue valueWithPointer:(__bridge const void *)(touch)];
       
       // fetch the squiggle this touch should be added to using the key
       Squiggle *squiggle = [squiggles valueForKey:
@@ -178,7 +177,7 @@
    for (UITouch *touch in touches)
    {
       // get the unique key for the touch
-      NSValue *touchValue = [NSValue valueWithPointer:touch];
+      NSValue *touchValue = [NSValue valueWithPointer:(__bridge const void *)(touch)];
       NSString *key = [NSString stringWithFormat:@"%@", touchValue];
       
       // retrieve the squiggle for this touch using the key
@@ -208,7 +207,6 @@
                      @"是否清除图画" message:nil delegate:self
                                      cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
         [alert show];
-        [alert release]; // release the alert UIAlertView
        } // end if
 	}
 	else {
@@ -234,13 +232,6 @@
 } // end method canBecomeFirstResponder
 
 // free MainView's memory
-- (void)dealloc
-{
-   [squiggles release]; // release the squiggles NSMutableDictionary
-   [finishedSquiggles release]; // release finishedSquiggles
-   [color release]; // release the color UIColor
-   [super dealloc];
-} // end method dealloc
 @end
 
 /**************************************************************************

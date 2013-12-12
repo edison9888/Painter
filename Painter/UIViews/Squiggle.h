@@ -11,7 +11,7 @@
 } // end instance variable declaration
 
 // declare strokeColor,lineWidth and points as properties
-@property (retain) UIColor* strokeColor;
+@property (strong) UIColor* strokeColor;
 @property (assign) float lineWidth;
 @property (nonatomic, readonly) NSMutableArray *points;
 

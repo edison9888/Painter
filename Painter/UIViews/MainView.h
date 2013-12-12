@@ -13,7 +13,7 @@
 } // end instance variable declaration
 
 // declare color and lineWidth as properties
-@property(nonatomic, retain) UIColor *color;
+@property(nonatomic, strong) UIColor *color;
 @property float lineWidth;
 
 // draw the given Squiggle into the given graphics context

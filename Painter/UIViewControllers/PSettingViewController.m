@@ -175,6 +175,7 @@
 {
     BOOL shadeOn = [sender isOn];
     [[NSUserDefaults standardUserDefaults] setBool:!shadeOn forKey:kShadeClean];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 - (void)updateColor:sender

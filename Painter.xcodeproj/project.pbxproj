@@ -40,8 +40,8 @@
 		BF7683D3185816BF007E5E20 /* me_setbn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF7683CF185816BF007E5E20 /* me_setbn@2x.png */; };
 		BF7683D4185816BF007E5E20 /* me_setbnon.png in Resources */ = {isa = PBXBuildFile; fileRef = BF7683D0185816BF007E5E20 /* me_setbnon.png */; };
 		BF7683D5185816BF007E5E20 /* me_setbnon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF7683D1185816BF007E5E20 /* me_setbnon@2x.png */; };
-		BF7683DB18581EA4007E5E20 /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7683D818581EA4007E5E20 /* MainView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		BF7683DC18581EA4007E5E20 /* Squiggle.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7683DA18581EA4007E5E20 /* Squiggle.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		BF7683DB18581EA4007E5E20 /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7683D818581EA4007E5E20 /* MainView.m */; };
+		BF7683DC18581EA4007E5E20 /* Squiggle.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7683DA18581EA4007E5E20 /* Squiggle.m */; };
 		BF7683E118584DC9007E5E20 /* setting_icon4.png in Resources */ = {isa = PBXBuildFile; fileRef = BF7683DF18584DC9007E5E20 /* setting_icon4.png */; };
 		BF7683E218584DC9007E5E20 /* setting_icon4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF7683E018584DC9007E5E20 /* setting_icon4@2x.png */; };
 		BF7683E5185851DC007E5E20 /* PSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7683E4185851DC007E5E20 /* PSettingViewController.m */; };

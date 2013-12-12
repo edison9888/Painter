@@ -36,12 +36,12 @@
     
     [UMSocialConfig setSupportSinaSSO:YES];
     
-//#warning 正式打包上线的时候把ifdef注释掉，测试和开发的时候不进行统计
-//#ifdef RELEASE
+#warning 正式打包上线的时候把ifdef注释掉，测试和开发的时候不进行统计
+#ifdef RELEASE
     [MobClick startWithAppkey:kUMAppKey reportPolicy:SEND_ON_EXIT channelId:kAppStore];
     [MobClick updateOnlineConfig];
     [MobClick setAppVersion:kAppVersion];
-//#endif
+#endif
     
     BOOL banner= [[MobClick getConfigParams:kAdBanner] boolValue];
     BOOL app = [[MobClick getConfigParams:kAppRecommend] boolValue];

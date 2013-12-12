@@ -15,7 +15,7 @@
    if (self = [super init])
    {
       points = [[NSMutableArray alloc] init]; // initialize points
-      strokeColor = [[UIColor blackColor] retain]; // set default color
+      strokeColor = [UIColor blackColor]; // set default color
    } // end if
    
    return self; // return this object
@@ -31,10 +31,4 @@
 } // end method addPoint:
 
 // release Squiggle's memory
-- (void)dealloc
-{
-   [strokeColor release]; // release the strokeColor UIColor
-   [points release]; // release the points NSMutableArray
-   [super dealloc];
-} // end method dealloc
 @end
