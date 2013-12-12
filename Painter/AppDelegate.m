@@ -36,13 +36,21 @@
     
     [UMSocialConfig setSupportSinaSSO:YES];
     
-#warning 正式打包上线的时候把ifdef注释掉，测试和开发的时候不进行统计
-#ifdef RELEASE
-    NSString *version = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"];
-
-    [MobClick startWithAppkey:kUMAppKey reportPolicy:SEND_ON_EXIT channelId:nil];
-    [MobClick setAppVersion:version];
-#endif
+//#warning 正式打包上线的时候把ifdef注释掉，测试和开发的时候不进行统计
+//#ifdef RELEASE
+    [MobClick startWithAppkey:kUMAppKey reportPolicy:SEND_ON_EXIT channelId:kAppStore];
+    [MobClick updateOnlineConfig];
+    [MobClick setAppVersion:kAppVersion];
+//#endif
+    
+    BOOL banner= [[MobClick getConfigParams:kAdBanner] boolValue];
+    BOOL app = [[MobClick getConfigParams:kAppRecommend] boolValue];
+    
+    [[NSUserDefaults standardUserDefaults] setBool:banner forKey:kAdBanner];
+    [[NSUserDefaults standardUserDefaults] setBool:app forKey:kAppRecommend];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    NSLog(@"addd %@ %@",kAdBanner,kAppRecommend);
     
     //有米
     [YouMiConfig setShouldGetLocation:NO];

@@ -10,6 +10,8 @@
 
 @interface PSettingViewController ()
 
+@property(nonatomic,strong)UIBarButtonItem *rightItem;
+
 @end
 
 @implementation PSettingViewController
@@ -21,16 +23,6 @@
         // Custom initialization
         [self.navigationItem addBackButton:self withAction:@selector(goBack)];
         [self.navigationItem setNavigationItemTitle:@"工具箱"];
-        
-        UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        rightBtn.frame = CGRectMake(0, 0, 60, 44);
-        [rightBtn setTitle:@"应用推荐" forState:UIControlStateNormal];
-        [rightBtn setTitleColor:PWhiteColor forState:UIControlStateNormal];
-        rightBtn.titleLabel.font = PFontSize(15);
-        [rightBtn addTarget:self action:@selector(showAPP) forControlEvents:UIControlEventTouchUpInside];
-        
-        UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView:rightBtn];
-        self.navigationItem.rightBarButtonItem = rightItem;
         
         UILabel *shadeLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 20, 80, 20)];
         shadeLabel.backgroundColor = PClearColor;
@@ -123,11 +115,44 @@
     return self;
 }
 
+-(void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UMOnlineConfigDidFinishedNotification object:nil];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor darkGrayColor];
+    
+    BOOL youmi = [[NSUserDefaults standardUserDefaults] boolForKey:kAppRecommend];
+    
+    UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    rightBtn.frame = CGRectMake(0, 0, 60, 44);
+    [rightBtn setTitle:@"应用推荐" forState:UIControlStateNormal];
+    [rightBtn setTitleColor:PWhiteColor forState:UIControlStateNormal];
+    rightBtn.titleLabel.font = PFontSize(15);
+    [rightBtn addTarget:self action:@selector(showAPP) forControlEvents:UIControlEventTouchUpInside];
+    
+    _rightItem = [[UIBarButtonItem alloc] initWithCustomView:rightBtn];
+    
+    if (youmi) {
+        self.navigationItem.rightBarButtonItem = _rightItem;
+    }
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onlineConfigCallBack:) name:UMOnlineConfigDidFinishedNotification object:nil];
+}
+
+- (void)onlineConfigCallBack:(NSNotification *)notification {
+    
+    BOOL youmi=[[notification.userInfo objectForKey:kAppRecommend] boolValue];
+    [[NSUserDefaults standardUserDefaults] setBool:youmi forKey:kAppRecommend];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    if (youmi && !_rightItem) {
+        self.navigationItem.rightBarButtonItem = _rightItem;
+    }
 }
 
 - (void)setColor:(UIColor *)color lineWidth:(float)width

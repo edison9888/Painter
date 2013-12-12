@@ -40,11 +40,31 @@
     _mainView.backgroundColor = PWhiteColor;
     [self.view addSubview:_mainView];
     
-    _adView = [[YouMiView alloc] initWithContentSizeIdentifier:YouMiBannerContentSizeIdentifier320x50 delegate:nil];
-    [_adView resetY:_mainView.height - 50];
-    _adView.delegate = self;
-    [_adView start];
-    [self.view addSubview:_adView];
+    BOOL youmi = [[NSUserDefaults standardUserDefaults] boolForKey:kAdBanner];
+
+    if (youmi) {
+        _adView = [[YouMiView alloc] initWithContentSizeIdentifier:YouMiBannerContentSizeIdentifier320x50 delegate:nil];
+        [_adView resetY:_mainView.height - 50];
+        _adView.delegate = self;
+        [_adView start];
+        [self.view addSubview:_adView];
+    }
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onlineConfigCallBack:) name:UMOnlineConfigDidFinishedNotification object:nil];
+}
+
+- (void)onlineConfigCallBack:(NSNotification *)notification {
+    BOOL youmi=[[notification.userInfo objectForKey:kAdBanner] boolValue];
+    
+    [[NSUserDefaults standardUserDefaults] setBool:youmi forKey:kAdBanner];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    if (youmi && !_adView) {
+        _adView = [[YouMiView alloc] initWithContentSizeIdentifier:YouMiBannerContentSizeIdentifier320x50 delegate:nil];
+        [_adView resetY:_mainView.height - 50];
+        _adView.delegate = self;
+        [_adView start];
+        [self.view addSubview:_adView];
+    }
 }
 
 - (void)didPresentScreen:(YouMiView *)adView

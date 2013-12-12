@@ -813,6 +813,7 @@
 		AF8B431E183265B80042696F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/jimmy/Desktop/Painter/Painter/ThirdLibrary/UMSocial_Sdk_3.1/frameworks/TencentOpenAPI,
@@ -836,6 +837,7 @@
 		AF8B431F183265B80042696F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/jimmy/Desktop/Painter/Painter/ThirdLibrary/UMSocial_Sdk_3.1/frameworks/TencentOpenAPI,

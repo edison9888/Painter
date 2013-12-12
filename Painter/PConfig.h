@@ -20,7 +20,14 @@
 //user default
 #define kShadeClean @"shadeClean"
 
+#define kAppVersion [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"]
 
+#define kAppStore @"AppStore"
+#define kNineOne @"91"
+#define kTongBuTui @"tongbutui"
+
+#define kAdBanner [NSString stringWithFormat:@"banner_%@_%@",kAppStore,kAppVersion]
+#define kAppRecommend [NSString stringWithFormat:@"app_%@_%@",kAppStore,kAppVersion]
 
 //第三方key
 #define kUMAppKey @"52a8342456240b9032041ee5"
