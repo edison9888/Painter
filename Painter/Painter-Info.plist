@@ -38,7 +38,7 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>sina.5214ddab56240b328b11ba22</string>
+				<string>sina.52a8342456240b9032041ee5</string>
 			</array>
 		</dict>
 		<dict>
@@ -46,7 +46,7 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>wx6e39922c08019250</string>
+				<string>wxa393da37761c7f6b</string>
 			</array>
 		</dict>
 		<dict>
@@ -54,7 +54,7 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>tencent100536337</string>
+				<string>tencent100575186</string>
 			</array>
 		</dict>
 		<dict>
@@ -62,7 +62,7 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>QQ05FE1011</string>
+				<string>QQ05FEA7D2</string>
 			</array>
 		</dict>
 	</array>

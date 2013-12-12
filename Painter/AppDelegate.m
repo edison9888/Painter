@@ -26,13 +26,13 @@
     //友盟社交
     [UMSocialData setAppKey:kUMAppKey];
     
-    [UMSocialConfig setWXAppId:@"wx6e39922c08019250" url:nil];
+    [UMSocialConfig setWXAppId:@"wxa393da37761c7f6b" url:nil];
     
     //打开Qzone的SSO开关
     [UMSocialConfig setSupportQzoneSSO:YES importClasses:@[[QQApiInterface class],[TencentOAuth class]]];
     
     //设置手机QQ的AppId，url传nil，将使用友盟的网址
-    [UMSocialConfig setQQAppId:@"100536337" url:nil importClasses:@[[QQApiInterface class],[TencentOAuth class]]];
+    [UMSocialConfig setQQAppId:@"100575186" url:nil importClasses:@[[QQApiInterface class],[TencentOAuth class]]];
     
     [UMSocialConfig setSupportSinaSSO:YES];
     

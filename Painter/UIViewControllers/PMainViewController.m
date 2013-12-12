@@ -20,7 +20,7 @@
     self = [super init];
     if (self) {
         // Custom initialization
-        [self.navigationItem setNavigationItemTitle:@"涂涂画画"];
+        [self.navigationItem setNavigationItemTitle:@"随心涂鸦"];
         [self.navigationItem addLeftButton:self withAction:@selector(moreEvent)];
         [self.navigationItem addRightButton:self withAction:@selector(showSetting)];
     }
@@ -128,7 +128,7 @@
     UIGraphicsEndImageContext();
 
     [UMSocialData defaultData].extConfig.wxMessageType = UMSocialWXMessageTypeApp;
-    [UMSocialData defaultData].extConfig.title = [NSString stringWithFormat:@"我在随心涂鸦上画了一幅画，大家都来画出你的心情吧"];
+    [UMSocialData defaultData].extConfig.title = [NSString stringWithFormat:@"随心涂鸦"];
     
     NSString *shareText = [NSString stringWithFormat:@"我在随心涂鸦上画了一幅画，大家都来画出你的心情吧！"];            //分享内嵌文字
     
