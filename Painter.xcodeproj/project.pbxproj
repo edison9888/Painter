@@ -70,6 +70,9 @@
 		BF7684AE18586EB0007E5E20 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF7684AD18586EB0007E5E20 /* CoreTelephony.framework */; };
 		BF7684B018586EB8007E5E20 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF7684AF18586EB8007E5E20 /* libstdc++.dylib */; };
 		BF7684B218586EBE007E5E20 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF7684B118586EBE007E5E20 /* libz.dylib */; };
+		BF7A51F018596E9E00838948 /* libYouMi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF7A51EF18596E9E00838948 /* libYouMi.a */; };
+		BF7A51F218596EB800838948 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF7A51F118596EB800838948 /* CFNetwork.framework */; };
+		BF7A51F5185971DC00838948 /* UIView+BM.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7A51F4185971DC00838948 /* UIView+BM.m */; };
 		BFB4D9FF185719EF0074A761 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFB4D9FC185719EF0074A761 /* Default-568h@2x.png */; };
 		BFB4DA00185719EF0074A761 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BFB4D9FD185719EF0074A761 /* Default.png */; };
 		BFB4DA01185719EF0074A761 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFB4D9FE185719EF0074A761 /* Default@2x.png */; };
@@ -174,6 +177,18 @@
 		BF7684AD18586EB0007E5E20 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		BF7684AF18586EB8007E5E20 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 		BF7684B118586EBE007E5E20 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		BF7A51E718596E9E00838948 /* YouMiConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouMiConfig.h; sourceTree = "<group>"; };
+		BF7A51E818596E9E00838948 /* YouMiDelegateProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouMiDelegateProtocol.h; sourceTree = "<group>"; };
+		BF7A51E918596E9E00838948 /* YouMiPointsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouMiPointsManager.h; sourceTree = "<group>"; };
+		BF7A51EA18596E9E00838948 /* YouMiView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouMiView.h; sourceTree = "<group>"; };
+		BF7A51EB18596E9E00838948 /* YouMiWall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouMiWall.h; sourceTree = "<group>"; };
+		BF7A51EC18596E9E00838948 /* YouMiWallAppModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouMiWallAppModel.h; sourceTree = "<group>"; };
+		BF7A51ED18596E9E00838948 /* YouMiWallSpot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouMiWallSpot.h; sourceTree = "<group>"; };
+		BF7A51EE18596E9E00838948 /* YouMiWallSpotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouMiWallSpotView.h; sourceTree = "<group>"; };
+		BF7A51EF18596E9E00838948 /* libYouMi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libYouMi.a; sourceTree = "<group>"; };
+		BF7A51F118596EB800838948 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		BF7A51F3185971DC00838948 /* UIView+BM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BM.h"; sourceTree = "<group>"; };
+		BF7A51F4185971DC00838948 /* UIView+BM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BM.m"; sourceTree = "<group>"; };
 		BFB4D9FC185719EF0074A761 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		BFB4D9FD185719EF0074A761 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		BFB4D9FE185719EF0074A761 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
@@ -187,6 +202,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF7A51F218596EB800838948 /* CFNetwork.framework in Frameworks */,
 				BF7684B218586EBE007E5E20 /* libz.dylib in Frameworks */,
 				BF7684B018586EB8007E5E20 /* libstdc++.dylib in Frameworks */,
 				BF7684AE18586EB0007E5E20 /* CoreTelephony.framework in Frameworks */,
@@ -196,6 +212,7 @@
 				BF76849C18586CEE007E5E20 /* libUMSocial_Sdk_Comment_3.1.a in Frameworks */,
 				BF76849B18586CEE007E5E20 /* libUMSocial_Sdk_3.1.a in Frameworks */,
 				BF76847518586AD7007E5E20 /* libMobClickLibrary_armv6.a in Frameworks */,
+				BF7A51F018596E9E00838948 /* libYouMi.a in Frameworks */,
 				BF7683A418580DCF007E5E20 /* QuartzCore.framework in Frameworks */,
 				BF76849A18586CED007E5E20 /* libWeChatSDK.a in Frameworks */,
 				AF8B42F7183265B80042696F /* CoreGraphics.framework in Frameworks */,
@@ -241,6 +258,7 @@
 		AF8B42F3183265B80042696F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BF7A51F118596EB800838948 /* CFNetwork.framework */,
 				BF7684B118586EBE007E5E20 /* libz.dylib */,
 				BF7684AF18586EB8007E5E20 /* libstdc++.dylib */,
 				BF7684AD18586EB0007E5E20 /* CoreTelephony.framework */,
@@ -347,6 +365,8 @@
 		BF7683CA185815A4007E5E20 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				BF7A51F3185971DC00838948 /* UIView+BM.h */,
+				BF7A51F4185971DC00838948 /* UIView+BM.m */,
 				BF7683E918586758007E5E20 /* UIImageCategory.h */,
 				BF7683EA18586758007E5E20 /* UIImageCategory.m */,
 				BF7683CB185815BB007E5E20 /* UINavigationItem+FR.h */,
@@ -369,6 +389,7 @@
 		BF7683ED18586906007E5E20 /* ThirdLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				BF7A51E518596E9E00838948 /* Youmi */,
 				BF76847618586CED007E5E20 /* UMSocial_Sdk_3.1 */,
 				BF76847018586AD7007E5E20 /* UMAnalytics_Sdk_2.2.1.OpenUDID */,
 				BF7683EE18586906007E5E20 /* SVProgressHUD */,
@@ -467,6 +488,30 @@
 				BF76849518586CED007E5E20 /* UMSShareListController.xib */,
 			);
 			path = SocialSDKXib;
+			sourceTree = "<group>";
+		};
+		BF7A51E518596E9E00838948 /* Youmi */ = {
+			isa = PBXGroup;
+			children = (
+				BF7A51E618596E9E00838948 /* include */,
+				BF7A51EF18596E9E00838948 /* libYouMi.a */,
+			);
+			path = Youmi;
+			sourceTree = "<group>";
+		};
+		BF7A51E618596E9E00838948 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				BF7A51E718596E9E00838948 /* YouMiConfig.h */,
+				BF7A51E818596E9E00838948 /* YouMiDelegateProtocol.h */,
+				BF7A51E918596E9E00838948 /* YouMiPointsManager.h */,
+				BF7A51EA18596E9E00838948 /* YouMiView.h */,
+				BF7A51EB18596E9E00838948 /* YouMiWall.h */,
+				BF7A51EC18596E9E00838948 /* YouMiWallAppModel.h */,
+				BF7A51ED18596E9E00838948 /* YouMiWallSpot.h */,
+				BF7A51EE18596E9E00838948 /* YouMiWallSpotView.h */,
+			);
+			path = include;
 			sourceTree = "<group>";
 		};
 		BFB4D9FA185719EF0074A761 /* Resource */ = {
@@ -634,6 +679,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF7683DC18581EA4007E5E20 /* Squiggle.m in Sources */,
+				BF7A51F5185971DC00838948 /* UIView+BM.m in Sources */,
 				BF7683E5185851DC007E5E20 /* PSettingViewController.m in Sources */,
 				BF7683DB18581EA4007E5E20 /* MainView.m in Sources */,
 				BF7683EB18586758007E5E20 /* UIImageCategory.m in Sources */,
@@ -780,6 +826,7 @@
 					/Users/jimmy/Desktop/Painter/Painter/ThirdLibrary/UMAnalytics_Sdk_2.2.1.OpenUDID,
 					/Users/jimmy/Desktop/Painter/Painter/ThirdLibrary/UMSocial_Sdk_3.1/frameworks/Wechat,
 					/Users/jimmy/Desktop/Painter/Painter/ThirdLibrary/UMSocial_Sdk_3.1,
+					/Users/jimmy/Desktop/Painter/Painter/ThirdLibrary/Youmi,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -802,6 +849,7 @@
 					/Users/jimmy/Desktop/Painter/Painter/ThirdLibrary/UMAnalytics_Sdk_2.2.1.OpenUDID,
 					/Users/jimmy/Desktop/Painter/Painter/ThirdLibrary/UMSocial_Sdk_3.1/frameworks/Wechat,
 					/Users/jimmy/Desktop/Painter/Painter/ThirdLibrary/UMSocial_Sdk_3.1,
+					/Users/jimmy/Desktop/Painter/Painter/ThirdLibrary/Youmi,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

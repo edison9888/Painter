@@ -17,8 +17,13 @@
 
 #import "PConfig.h"
 
+#import "YouMiConfig.h"
+#import "YouMiWall.h"
+#import "YouMiView.h"
+
 #import "SVProgressHUD.h"
 #import "MobClick.h"
 #import "UMSocial.h"
 
+#import "UIView+BM.h"
 #import "UINavigationItem+FR.h"

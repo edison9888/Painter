@@ -199,19 +199,16 @@
 // called when a motion event, such as a shake, ends
 - (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
 {
-	NSUserDefaults *SwitchV = [NSUserDefaults standardUserDefaults];
-	IsOnoff = [SwitchV integerForKey:@"integerKey"];
-	if (IsOnoff==0) {
+    BOOL shadeOn = [[NSUserDefaults standardUserDefaults] boolForKey:kShadeClean];
+	if (!shadeOn) {
    // if a shake event ended
        if (event.subtype == UIEventSubtypeMotionShake)
        {
-          // create an alert prompting the user about clearing the painting
-          NSString *message = @"是否清除屏幕图像？";
-          UIAlertView *alert = [[UIAlertView alloc] initWithTitle:
-             @"清除图像" message:message delegate:self
-             cancelButtonTitle:@"取消" otherButtonTitles:@"清除", nil];
-          [alert show]; // show the alert
-          [alert release]; // release the alert UIAlertView
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:
+                     @"是否清除图画" message:nil delegate:self
+                                     cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+        [alert show];
+        [alert release]; // release the alert UIAlertView
        } // end if
 	}
 	else {

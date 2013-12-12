@@ -17,6 +17,13 @@
 
 #define PFontSize(x) [UIFont systemFontOfSize:x]
 
+//user default
 #define kShadeClean @"shadeClean"
 
+
+
+//第三方key
 #define kUMAppKey @"52a8342456240b9032041ee5"
+
+#define kYoumiAppID @"25ae9de162414438"
+#define kYoumiAppSecret @"e660fc42c6f80d5c"

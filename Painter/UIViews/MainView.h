@@ -6,8 +6,6 @@
 
 @interface MainView : UIView
 {
-   NSInteger IsOnoff;
-	
    NSMutableDictionary *squiggles; // squiggles in progress
    NSMutableArray *finishedSquiggles; // finished squiggles
    UIColor *color; // the current drawing color

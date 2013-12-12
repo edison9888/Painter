@@ -220,7 +220,11 @@
 
 -(void)showAPP
 {
-    
+    [YouMiWall showOffers:NO didShowBlock:^{
+        NSLog(@"有米推荐墙已显示");
+    } didDismissBlock:^{
+        NSLog(@"有米推荐墙已退出");
+    }];
 }
 
 - (void)didReceiveMemoryWarning

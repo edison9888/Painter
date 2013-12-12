@@ -11,6 +11,8 @@
 
 @interface PMainViewController ()
 
+@property(nonatomic,strong)YouMiView *adView;
+
 @end
 
 @implementation PMainViewController
@@ -37,6 +39,17 @@
     _mainView = [[MainView alloc] initWithFrame:CGRectMake(0, 0, 320, self.view.bounds.size.height-44)];
     _mainView.backgroundColor = PWhiteColor;
     [self.view addSubview:_mainView];
+    
+    _adView = [[YouMiView alloc] initWithContentSizeIdentifier:YouMiBannerContentSizeIdentifier320x50 delegate:nil];
+    [_adView resetY:_mainView.height - 50];
+    _adView.delegate = self;
+    [_adView start];
+    [self.view addSubview:_adView];
+}
+
+- (void)didPresentScreen:(YouMiView *)adView
+{
+    _adView.hidden = YES;
 }
 
 -(void)viewDidAppear:(BOOL)animated

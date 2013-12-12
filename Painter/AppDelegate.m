@@ -38,8 +38,17 @@
     
 #warning 正式打包上线的时候把ifdef注释掉，测试和开发的时候不进行统计
 #ifdef RELEASE
+    NSString *version = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"];
+
     [MobClick startWithAppkey:kUMAppKey reportPolicy:SEND_ON_EXIT channelId:nil];
+    [MobClick setAppVersion:version];
 #endif
+    
+    //有米
+    [YouMiConfig setShouldGetLocation:NO];
+    [YouMiConfig setUseInAppStore:YES];  // [可选]开启内置appStore，详细请看YouMiSDK常见问题解答
+    [YouMiConfig launchWithAppID:kYoumiAppID appSecret:kYoumiAppSecret];
+    [YouMiWall enable];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
