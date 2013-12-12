@@ -816,18 +816,17 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/jimmy/Desktop/Painter/Painter/ThirdLibrary/UMSocial_Sdk_3.1/frameworks/TencentOpenAPI,
+					"\"$(SRCROOT)/Painter/ThirdLibrary/UMSocial_Sdk_3.1/frameworks/TencentOpenAPI\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Painter/Painter-Prefix.pch";
 				INFOPLIST_FILE = "Painter/Painter-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/jimmy/Desktop/Painter/Painter/ThirdLibrary/Analytics_iOS_SDK_2.2.1.OpenUDID/UMAnalytics_Sdk_2.2.1.OpenUDID,
-					/Users/jimmy/Desktop/Painter/Painter/ThirdLibrary/UMAnalytics_Sdk_2.2.1.OpenUDID,
-					/Users/jimmy/Desktop/Painter/Painter/ThirdLibrary/UMSocial_Sdk_3.1/frameworks/Wechat,
-					/Users/jimmy/Desktop/Painter/Painter/ThirdLibrary/UMSocial_Sdk_3.1,
-					/Users/jimmy/Desktop/Painter/Painter/ThirdLibrary/Youmi,
+					"\"$(SRCROOT)/Painter/ThirdLibrary/UMAnalytics_Sdk_2.2.1.OpenUDID\"",
+					"\"$(SRCROOT)/Painter/ThirdLibrary/Youmi\"",
+					"\"$(SRCROOT)/Painter/ThirdLibrary/UMSocial_Sdk_3.1\"",
+					"\"$(SRCROOT)/Painter/ThirdLibrary/UMSocial_Sdk_3.1/frameworks/Wechat\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -840,18 +839,17 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/jimmy/Desktop/Painter/Painter/ThirdLibrary/UMSocial_Sdk_3.1/frameworks/TencentOpenAPI,
+					"\"$(SRCROOT)/Painter/ThirdLibrary/UMSocial_Sdk_3.1/frameworks/TencentOpenAPI\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Painter/Painter-Prefix.pch";
 				INFOPLIST_FILE = "Painter/Painter-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/jimmy/Desktop/Painter/Painter/ThirdLibrary/Analytics_iOS_SDK_2.2.1.OpenUDID/UMAnalytics_Sdk_2.2.1.OpenUDID,
-					/Users/jimmy/Desktop/Painter/Painter/ThirdLibrary/UMAnalytics_Sdk_2.2.1.OpenUDID,
-					/Users/jimmy/Desktop/Painter/Painter/ThirdLibrary/UMSocial_Sdk_3.1/frameworks/Wechat,
-					/Users/jimmy/Desktop/Painter/Painter/ThirdLibrary/UMSocial_Sdk_3.1,
-					/Users/jimmy/Desktop/Painter/Painter/ThirdLibrary/Youmi,
+					"\"$(SRCROOT)/Painter/ThirdLibrary/UMAnalytics_Sdk_2.2.1.OpenUDID\"",
+					"\"$(SRCROOT)/Painter/ThirdLibrary/Youmi\"",
+					"\"$(SRCROOT)/Painter/ThirdLibrary/UMSocial_Sdk_3.1\"",
+					"\"$(SRCROOT)/Painter/ThirdLibrary/UMSocial_Sdk_3.1/frameworks/Wechat\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
