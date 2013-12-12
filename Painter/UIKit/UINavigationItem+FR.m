@@ -25,7 +25,7 @@
 
 - (void)addLeftButton:(id)viewController withAction:(SEL)action
 {
-    UIButton *LeftButton = [self createNavtgationItemButton:CGRectMake(0, 0, 30, 32) normalImage:[UIImage imageNamed:@"setting_icon4"] highlightImage:nil title:nil viewController:viewController action:action];
+    UIButton *LeftButton = [self createNavtgationItemButton:CGRectMake(0, 0, 21, 23) normalImage:[UIImage imageNamed:@"setting_icon4"] highlightImage:nil title:nil viewController:viewController action:action];
     
     UIBarButtonItem *leftItem = [[UIBarButtonItem alloc]initWithCustomView:LeftButton];
     self.leftBarButtonItem= leftItem;
