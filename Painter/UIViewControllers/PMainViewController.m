@@ -22,7 +22,7 @@
     self = [super init];
     if (self) {
         // Custom initialization
-        [self.navigationItem setNavigationItemTitle:@"随心涂鸦"];
+        [self.navigationItem setNavigationItemTitle:@"随性涂鸦"];
         [self.navigationItem addLeftButton:self withAction:@selector(moreEvent)];
         [self.navigationItem addRightButton:self withAction:@selector(showSetting)];
     }
