@@ -161,9 +161,9 @@
     UIGraphicsEndImageContext();
 
     [UMSocialData defaultData].extConfig.wxMessageType = UMSocialWXMessageTypeApp;
-    [UMSocialData defaultData].extConfig.title = [NSString stringWithFormat:@"随心涂鸦"];
+    [UMSocialData defaultData].extConfig.title = [NSString stringWithFormat:@"随性涂鸦"];
     
-    NSString *shareText = [NSString stringWithFormat:@"我在随心涂鸦上画了一幅画，大家都来画出你的心情吧！"];            //分享内嵌文字
+    NSString *shareText = [NSString stringWithFormat:@"我在随性涂鸦上画了一幅画，大家都来画出你的心情吧！"];            //分享内嵌文字
     
     //如果得到分享完成回调，需要传递delegate参数
     [UMSocialSnsService presentSnsIconSheetView:self appKey:kUMAppKey shareText:shareText shareImage:shareImage shareToSnsNames:@[UMShareToSina,UMShareToTencent,UMShareToWechatSession,UMShareToWechatTimeline,UMShareToQQ] delegate:nil];
