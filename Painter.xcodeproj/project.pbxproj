@@ -77,6 +77,7 @@
 		BFB4DA00185719EF0074A761 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BFB4D9FD185719EF0074A761 /* Default.png */; };
 		BFB4DA01185719EF0074A761 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFB4D9FE185719EF0074A761 /* Default@2x.png */; };
 		BFB4DA0618571DE80074A761 /* PMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB4DA0518571DE80074A761 /* PMainViewController.m */; };
+		BFC174EB1862F83B001FF72A /* PColorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC174EA1862F83B001FF72A /* PColorViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -195,6 +196,8 @@
 		BFB4DA0218571A460074A761 /* PConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PConfig.h; sourceTree = "<group>"; };
 		BFB4DA0418571DE80074A761 /* PMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMainViewController.h; sourceTree = "<group>"; };
 		BFB4DA0518571DE80074A761 /* PMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMainViewController.m; sourceTree = "<group>"; };
+		BFC174E91862F83B001FF72A /* PColorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PColorViewController.h; sourceTree = "<group>"; };
+		BFC174EA1862F83B001FF72A /* PColorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PColorViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -542,6 +545,8 @@
 				BFB4DA0518571DE80074A761 /* PMainViewController.m */,
 				BF7683E3185851DC007E5E20 /* PSettingViewController.h */,
 				BF7683E4185851DC007E5E20 /* PSettingViewController.m */,
+				BFC174E91862F83B001FF72A /* PColorViewController.h */,
+				BFC174EA1862F83B001FF72A /* PColorViewController.m */,
 			);
 			path = UIViewControllers;
 			sourceTree = "<group>";
@@ -685,6 +690,7 @@
 				BF7683EB18586758007E5E20 /* UIImageCategory.m in Sources */,
 				BF7683CD185815BB007E5E20 /* UINavigationItem+FR.m in Sources */,
 				BF7683F318586906007E5E20 /* SVProgressHUD.m in Sources */,
+				BFC174EB1862F83B001FF72A /* PColorViewController.m in Sources */,
 				BFB4DA0618571DE80074A761 /* PMainViewController.m in Sources */,
 				AF8B4305183265B80042696F /* AppDelegate.m in Sources */,
 				AF8B4301183265B80042696F /* main.m in Sources */,

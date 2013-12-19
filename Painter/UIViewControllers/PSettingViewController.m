@@ -7,6 +7,7 @@
 //
 
 #import "PSettingViewController.h"
+#import "PColorViewController.h"
 
 @interface PSettingViewController ()
 
@@ -93,6 +94,9 @@
         _colorView.layer.borderWidth = 1.0;
         _colorView.layer.borderColor = PWhiteColor.CGColor;
         [self.view addSubview:_colorView];
+        
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(pushToColor)];
+        [_colorView addGestureRecognizer:tap];
         
         UIButton *penBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         penBtn.frame = CGRectMake(20, 310, 75, 75);
@@ -251,6 +255,13 @@
     } didDismissBlock:^{
         NSLog(@"有米推荐墙已退出");
     }];
+}
+
+-(void)pushToColor
+{
+    PColorViewController *colorVC = [[PColorViewController alloc] init];
+    colorVC.selectedColor = _colorView.backgroundColor;
+    [self.navigationController pushViewController:colorVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning

@@ -20,10 +20,10 @@
 
 @property(nonatomic,strong)UISlider *widthSlider;
 
-@property(nonatomic, strong) IBOutlet UISlider *redSlider;
-@property(nonatomic, strong) IBOutlet UISlider *greenSlider;
-@property(nonatomic, strong) IBOutlet UISlider *blueSlider;
-@property(nonatomic, strong) IBOutlet UIView *colorView;
+@property(nonatomic, strong) UISlider *redSlider;
+@property(nonatomic, strong) UISlider *greenSlider;
+@property(nonatomic, strong) UISlider *blueSlider;
+@property(nonatomic, strong) UIView *colorView;
 
 - (void)setColor:(UIColor *)color lineWidth:(float)width;
 
