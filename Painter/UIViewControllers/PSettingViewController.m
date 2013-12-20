@@ -153,7 +153,7 @@
     [[NSUserDefaults standardUserDefaults] setBool:youmi forKey:kAppRecommend];
     [[NSUserDefaults standardUserDefaults] synchronize];
     
-    if (youmi && !_rightItem) {
+    if (youmi) {
         self.navigationItem.rightBarButtonItem = _rightItem;
     }
 }
