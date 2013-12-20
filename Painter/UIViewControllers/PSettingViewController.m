@@ -7,7 +7,6 @@
 //
 
 #import "PSettingViewController.h"
-#import "PColorViewController.h"
 
 @interface PSettingViewController ()
 
@@ -192,6 +191,18 @@
     [_colorView setBackgroundColor:color];
 } // end method updateColor:
 
+-(void)updateSelectedColor:(UIColor *)color
+{
+    [_colorView setBackgroundColor:color];
+    
+    const float *colors = CGColorGetComponents(color.CGColor);
+    
+    // update the sliders with the new value
+    _redSlider.value = colors[0]; // set the red slider’s value
+    _greenSlider.value = colors[1]; // set the green slider’s value
+    _blueSlider.value = colors[2]; // set the blue slider’s value
+}
+
 -(void)penEvent
 {
     [UIView beginAnimations:nil context:nil]; // begin animation block
@@ -260,6 +271,7 @@
 -(void)pushToColor
 {
     PColorViewController *colorVC = [[PColorViewController alloc] init];
+    colorVC.delegate = self;
     colorVC.selectedColor = _colorView.backgroundColor;
     [self.navigationController pushViewController:colorVC animated:YES];
 }

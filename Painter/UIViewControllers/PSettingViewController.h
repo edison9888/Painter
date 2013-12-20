@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PColorViewController.h"
 
 @protocol PSettingViewControllerDelegate
 - (void)setColor:(UIColor *)color; // sets the current drawing color
@@ -14,7 +15,7 @@
 - (void)resetView; // erases the entire painting
 @end // end protocol FlipsideViewControllerDelegate
 
-@interface PSettingViewController : UIViewController<UIAlertViewDelegate>
+@interface PSettingViewController : UIViewController<UIAlertViewDelegate,colorViewControllerDelegate>
 
 @property(nonatomic,assign)id<PSettingViewControllerDelegate> delegate;
 
