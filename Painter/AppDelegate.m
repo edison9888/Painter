@@ -38,7 +38,7 @@
     
 #warning 正式打包上线的时候把ifdef注释掉，测试和开发的时候不进行统计
 #ifdef RELEASE
-    [MobClick startWithAppkey:kUMAppKey reportPolicy:SEND_ON_EXIT channelId:kAppStore];
+    [MobClick startWithAppkey:kUMAppKey reportPolicy:SEND_ON_EXIT channelId:kNineOne];
     [MobClick updateOnlineConfig];
     [MobClick setAppVersion:kAppVersion];
 #endif
